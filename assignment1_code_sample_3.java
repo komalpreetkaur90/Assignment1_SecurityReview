@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class VulnerableApp {
 
-    private static final String DB_URL = "jdbc:mysql://mydatabase.com/mydb";
-    private static final String DB_USER = "admin";
-    private static final String DB_PASSWORD = "secret123";
+    private static final String DB_URL = System.getenv("DB_URL");
+    private static final String DB_USER = System.getenv("DB_USER");
+    private static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
 
     public static String getUserInput() {
         Scanner scanner = new Scanner(System.in);
