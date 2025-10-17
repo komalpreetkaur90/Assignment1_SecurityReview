@@ -31,7 +31,7 @@ public class VulnerableApp {
     public static String getData() {
         StringBuilder result = new StringBuilder();
         try {
-            URL url = new URL("http://insecure-api.com/get-data");
+            URL url = new URL("https://secure-api.com/get-data");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
 
