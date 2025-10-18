@@ -16,7 +16,7 @@ public class VulnerableApp {
     public static String getUserInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
-        return scanner.nextLine();
+        return scanner.nextLine().trim().replaceAll("[\\r\\n]", " ");
         if (input.length() > 100) {
         input = input.substring(0, 100);
         }
