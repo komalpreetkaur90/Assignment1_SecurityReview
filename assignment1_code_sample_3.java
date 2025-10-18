@@ -17,6 +17,10 @@ public class VulnerableApp {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         return scanner.nextLine();
+        if (input.length() > 100) {
+        input = input.substring(0, 100);
+        }
+        return input;
     }
 
     public static void sendEmail(String to, String subject, String body) {
